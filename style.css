@@ -1,0 +1,2548 @@
+/*=========================================================
+SUCCESS RENTALS
+Professional Property Management Services
+Version : 2.0 Premium
+Author  : ChatGPT
+=========================================================*/
+
+
+/*=========================================================
+GOOGLE FONT
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*=========================================================
+CSS RESET
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fb;
+
+    color:#444;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+/*=========================================================
+ROOT VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#0b2d5c;
+
+    --secondary:#d4af37;
+
+    --secondary-dark:#c79b14;
+
+    --white:#ffffff;
+
+    --light:#f7f9fc;
+
+    --text:#555;
+
+    --heading:#12284c;
+
+    --shadow:0 15px 45px rgba(0,0,0,.08);
+
+    --shadow-hover:0 25px 55px rgba(0,0,0,.12);
+
+    --radius:20px;
+
+    --transition:.35s ease;
+
+}
+
+
+/*=========================================================
+GLOBAL
+=========================================================*/
+
+.container{
+
+    width:92%;
+
+    max-width:1280px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:90px 0;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-heading h2{
+
+    color:var(--heading);
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+.section-heading p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+
+/*=========================================================
+HEADER
+=========================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(11,45,92,.70);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.10);
+
+    transition:.4s;
+
+}
+
+/*==================================================
+LOGO
+==================================================*/
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:70px;
+    width:auto;
+    display:block;
+    transition:0.3s ease;
+}
+
+.logo img:hover{
+    transform:scale(1.05);
+}
+
+@media (max-width:768px){
+
+    .logo img{
+        height:55px;
+    }
+
+}
+
+header .container {
+  display: flex !important;
+  align-items: center !important; /* Centers the logo and list vertically inside the bar */
+  justify-content: space-between !important;
+  height: 80px; /* Adjust this value if needed to match your navbar height */
+}
+
+/* Ensure the nav links list is centered inline */
+nav ul.nav-links-container {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+
+/*=========================================================
+LOGO
+=========================================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    width:72px;
+
+    height:72px;
+
+    object-fit:contain;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    padding:6px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/*=========================================================
+NAVIGATION
+=========================================================*/
+
+nav{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:36px;
+
+}
+
+nav ul li a{
+
+    color:#fff;
+
+    font-weight:500;
+
+    font-size:16px;
+
+    position:relative;
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:var(--secondary);
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*=========================================================
+HEADER RIGHT
+=========================================================*/
+
+.header-right{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.phone{
+
+    color:#fff;
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+.contact-btn{
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+    padding:13px 26px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-btn:hover{
+
+    background:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+
+/*=========================================================
+HERO SECTION
+=========================================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    background:url("images/hero.jpg") center center/cover no-repeat;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+    rgba(8,28,54,.75),
+
+    rgba(8,28,54,.60)
+
+    );
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    align-items:center;
+
+}
+
+.hero-left{
+
+    max-width:720px;
+
+    color:#fff;
+
+}
+
+.hero-left h1{
+
+    font-size:62px;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+.hero-left p{
+
+    font-size:20px;
+
+    color:#f1f1f1;
+
+    margin-bottom:40px;
+
+    max-width:620px;
+
+}
+
+
+/*=========================================================
+HERO BUTTONS
+=========================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-gold{
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn-gold:hover{
+
+    background:#fff;
+
+    transform:translateY(-4px);
+
+}
+
+.btn-outline{
+
+    border:2px solid #fff;
+
+    color:#fff;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+}
+
+.btn-outline:hover{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+
+/*=========================================================
+SMALL BUTTON
+=========================================================*/
+
+.small-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:12px 22px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.small-btn:hover{
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+}
+
+
+/*=========================================================
+ANIMATIONS
+=========================================================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero-left{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+
+/*=========================================================
+SECTION BACKGROUNDS
+=========================================================*/
+
+.who-section{
+
+    background:#ffffff;
+
+}
+
+.why-success{
+
+    background:#f7f9fc;
+
+}
+
+.plans{
+
+    background:#ffffff;
+
+}
+
+.service-charges-section{
+
+    background:#f7f9fc;
+
+}
+
+.important-info{
+
+    background:#ffffff;
+
+}
+
+.contact-strip{
+
+    background:#0b2d5c;
+
+}
+
+footer{
+
+    background:#071b36;
+
+    color:#fff;
+
+}
+
+/*=========================================================
+WHO IS THIS SERVICE FOR
+=========================================================*/
+
+.who-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.who-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    display:flex;
+
+    gap:22px;
+
+    align-items:flex-start;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    border-top:5px solid transparent;
+
+}
+
+.who-card:hover{
+
+    transform:translateY(-10px);
+
+    border-top:5px solid var(--secondary);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.who-card.gold{
+
+    border-top:5px solid var(--secondary);
+
+}
+
+.icon-circle{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    flex-shrink:0;
+
+}
+
+.icon-circle.gold{
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+}
+
+.who-card h3{
+
+    color:var(--secondary);
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+
+}
+
+.who-card h4{
+
+    color:var(--heading);
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.who-card p{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+
+
+/*=========================================================
+WHY SUCCESS RENTALS
+=========================================================*/
+
+.why-wrapper{
+
+    display:grid;
+
+    grid-template-columns:3fr 1fr;
+
+    gap:35px;
+
+    align-items:start;
+
+}
+
+
+
+/*=========================================================
+INFO GRID
+=========================================================*/
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+/*=========================================================
+INFO CARD
+=========================================================*/
+
+.info-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.info-icon{
+
+    width:75px;
+
+    height:75px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,var(--primary),#1b4b87);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.info-card h3{
+
+    color:var(--heading);
+
+    font-size:21px;
+
+    margin-bottom:15px;
+
+}
+
+.info-card p{
+
+    color:#666;
+
+    font-size:15px;
+
+    min-height:70px;
+
+}
+
+.info-card .small-btn{
+
+    margin-top:18px;
+
+}
+
+
+
+/*=========================================================
+AVAILABILITY CARD
+=========================================================*/
+
+.availability-card{
+
+    background:linear-gradient(
+
+        180deg,
+
+        #103b74,
+
+        #082448
+
+    );
+
+    border-radius:22px;
+
+    padding:35px;
+
+    color:#fff;
+
+    position:sticky;
+
+    top:120px;
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.availability-card h2{
+
+    font-size:34px;
+
+    margin-bottom:30px;
+
+    color:#fff;
+
+}
+
+.availability-box{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.availability-box h4{
+
+    color:var(--secondary);
+
+    margin-bottom:12px;
+
+    font-size:20px;
+
+}
+
+.availability-box p{
+
+    margin-bottom:10px;
+
+    color:#f4f4f4;
+
+}
+
+.availability-box hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.15);
+
+    margin:22px 0;
+
+}
+
+
+
+/*=========================================================
+SECTION HEADING IMPROVEMENT
+=========================================================*/
+
+.section-heading::after{
+
+    content:"";
+
+    width:90px;
+
+    height:5px;
+
+    background:var(--secondary);
+
+    display:block;
+
+    margin:18px auto 0;
+
+    border-radius:20px;
+
+}
+
+
+
+/*=========================================================
+SUBTLE HOVER EFFECT
+=========================================================*/
+
+.info-card:hover h3,
+
+.who-card:hover h4{
+
+    color:var(--secondary);
+
+}
+
+
+
+/*=========================================================
+PREMIUM FADE
+=========================================================*/
+
+.who-card,
+
+.info-card,
+
+.availability-card{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.who-card:nth-child(1){animation-delay:.1s;}
+.who-card:nth-child(2){animation-delay:.2s;}
+.who-card:nth-child(3){animation-delay:.3s;}
+
+.info-card:nth-child(1){animation-delay:.1s;}
+.info-card:nth-child(2){animation-delay:.2s;}
+.info-card:nth-child(3){animation-delay:.3s;}
+.info-card:nth-child(4){animation-delay:.4s;}
+.info-card:nth-child(5){animation-delay:.5s;}
+.info-card:nth-child(6){animation-delay:.6s;}
+
+/*=========================================================
+SERVICE PLANS
+=========================================================*/
+
+.plans-section{
+    padding:90px 0;
+    background:#f5f7fb;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 60px;
+}
+
+.section-heading span{
+    color:#d4af37;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-heading h2{
+    font-size:42px;
+    color:#0b2d5c;
+    margin:15px 0;
+    font-weight:700;
+}
+
+.section-heading p{
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/*====================================*/
+
+.plans-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    align-items:stretch;
+
+}
+
+/*====================================*/
+
+.plan-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:38px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border-top:6px solid #d4af37;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.plan-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.16);
+
+}
+
+/*====================================*/
+
+.plan-header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.plan-number{
+
+    display:inline-block;
+
+    background:#0b2d5c;
+
+    color:#fff;
+
+    padding:8px 22px;
+
+    border-radius:40px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+}
+
+.plan-header h3{
+
+    font-size:30px;
+
+    color:#0b2d5c;
+
+    margin-bottom:12px;
+
+}
+
+.plan-subtitle{
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+/*====================================*/
+
+.plan-features{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+    flex:1;
+
+}
+
+.plan-features li{
+
+    padding:10px 0;
+
+    font-size:17px;
+
+    color:#444;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+/*====================================*/
+
+
+.price-box{
+
+    margin:30px 0;
+
+    background:linear-gradient(135deg,#0b2d5c,#163f78);
+
+    color:#fff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    text-align:center;
+
+    min-height:190px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.price-box h4{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    color:#d4af37;
+
+    margin:0;
+
+    min-height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    line-height:1;
+
+}
+
+.price-box span{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+}
+
+/*====================================*/
+
+.visit-charge{
+
+    text-align:center;
+
+    padding:18px;
+
+    background:#fff7e5;
+
+    border-radius:15px;
+
+    font-size:18px;
+
+    color:#0b2d5c;
+
+    font-weight:600;
+
+    margin-top:10px;
+
+}
+
+/*====================================*/
+
+.plan-button{
+
+    display:block;
+
+    margin-top:28px;
+
+    text-align:center;
+
+    background:#d4af37;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.plan-button:hover{
+
+    background:#0b2d5c;
+
+    transform:translateY(-3px);
+
+}
+
+/*====================================*/
+
+@media(max-width:992px){
+
+.plans-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.plan-card{
+
+padding:30px;
+
+}
+
+.section-heading h2{
+
+font-size:34px;
+
+}
+
+}
+
+
+/*=========================================================
+HOW IT WORKS
+=========================================================*/
+
+.process-section{
+    padding:90px 0;
+    background:linear-gradient(to bottom,#ffffff,#f7f9fc);
+    position:relative;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+    margin-top:60px;
+}
+
+.process-card{
+    background:#ffffff;
+    border-radius:22px;
+    padding:35px 30px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:
+        transform .45s ease,
+        box-shadow .35s ease;
+
+    border-top:5px solid #d4af37;
+    overflow:hidden;
+}
+
+
+.process-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 45px rgba(0,0,0,.15);
+}
+
+.step-number{
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:48px;
+    font-weight:800;
+    color:rgba(11,45,92,.08);
+    line-height:1;
+}
+
+.process-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0b2d5c,#1d4d8f);
+    color:#d4af37;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    box-shadow:0 10px 25px rgba(11,45,92,.25);
+}
+
+.process-card h3{
+    color:#0b2d5c;
+    font-size:24px;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.process-card p{
+    color:#666;
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* Decorative Gold Line */
+
+.process-card::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#d4af37;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.35s;
+}
+
+.process-card:hover::after{
+    transform:scaleX(1);
+}
+
+/*======================================
+Responsive
+======================================*/
+
+@media(max-width:992px){
+
+.process-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.process-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.process-card{
+
+padding:30px 25px;
+
+}
+
+.process-icon{
+
+width:75px;
+height:75px;
+font-size:28px;
+
+}
+
+.process-card h3{
+
+font-size:22px;
+
+}
+
+}
+
+
+
+/*=========================================================
+            SERVICE CHARGES
+=========================================================*/
+
+.service-charges-section{
+
+    text-align:center;
+
+}
+
+.charges-image{
+
+    margin-top:50px;
+
+}
+
+.charges-image img{
+
+    width:100%;
+
+    max-width:1150px;
+
+    border-radius:22px;
+
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.charges-image img:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*=========================================================
+            IMPORTANT INFORMATION
+=========================================================*/
+
+.info-three-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.important-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.important-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.important-card h3{
+
+    color:var(--primary);
+
+    font-size:26px;
+
+    margin-bottom:20px;
+
+    position:relative;
+
+    padding-bottom:15px;
+
+}
+
+.important-card h3::after{
+
+    content:"";
+
+    width:70px;
+
+    height:4px;
+
+    background:var(--secondary);
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    border-radius:20px;
+
+}
+
+.important-card p{
+
+    color:#666;
+
+    margin-bottom:15px;
+
+}
+
+.important-card ul{
+
+    margin-top:15px;
+
+    padding-left:18px;
+
+}
+
+.important-card li{
+
+    list-style:disc;
+
+    margin-bottom:12px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+.important-card .small-btn{
+
+    margin-top:auto;
+
+    align-self:flex-start;
+
+}
+
+/*=========================================================
+            PREMIUM CARD EFFECT
+=========================================================*/
+
+.plan-card::before,
+
+.important-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(90deg,var(--secondary),#f4d977);
+
+}
+
+.important-card{
+
+    position:relative;
+
+}
+
+.plan-card,
+
+.important-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+/*=========================================================
+            SOFT BACKGROUND SHAPES
+=========================================================*/
+
+.plans{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.plans::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(212,175,55,.05);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+.plans::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    background:rgba(11,45,92,.05);
+
+    border-radius:50%;
+
+    bottom:-80px;
+
+    left:-80px;
+
+}
+
+/*=========================================================
+CONTACT STRIP
+=========================================================*/
+
+.contact-strip{
+
+    padding:70px 0;
+
+    background:linear-gradient(135deg,#0b2d5c,#123f79);
+
+}
+
+.contact-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.contact-box{
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.contact-box:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.contact-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.contact-box h4{
+
+    margin-bottom:5px;
+
+    color:#fff;
+
+}
+
+.contact-box p{
+
+    color:#f1f1f1;
+
+    font-size:15px;
+
+}
+
+
+
+/*=========================================================
+FOOTER
+=========================================================*/
+
+footer{
+
+    padding:70px 0 25px;
+
+    background:#071b36;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+    gap:45px;
+
+}
+
+.footer-logo{
+
+    width:85px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-grid h3{
+
+    color:var(--secondary);
+
+    margin-bottom:22px;
+
+    font-size:22px;
+
+}
+
+.footer-grid p{
+
+    color:#d5d5d5;
+
+    margin-bottom:12px;
+
+}
+
+.footer-grid ul{
+
+    list-style:none;
+
+}
+
+.footer-grid li{
+
+    margin-bottom:12px;
+
+}
+
+.footer-grid a{
+
+    color:#ddd;
+
+}
+
+.footer-grid a:hover{
+
+    color:var(--secondary);
+
+    padding-left:6px;
+
+}
+
+footer hr{
+
+    margin:45px 0 25px;
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    color:#bbb;
+
+    font-size:15px;
+
+}
+
+
+
+/*=========================================================
+FLOATING BUTTONS
+=========================================================*/
+
+.floating-whatsapp{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:95px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    padding:16px 24px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    z-index:999;
+
+}
+
+.floating-whatsapp:hover{
+
+    transform:scale(1.06);
+
+}
+
+.floating-call{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:25px;
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    z-index:999;
+
+}
+
+.floating-call:hover{
+
+    transform:scale(1.06);
+
+}
+
+
+
+/*=========================================================
+IMAGE EFFECTS
+=========================================================*/
+
+img{
+
+    transition:.35s;
+
+}
+
+img:hover{
+
+    transform:scale(1.01);
+
+}
+
+
+
+/*=========================================================
+SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--secondary);
+
+}
+
+
+
+/*=========================================================
+TABLET
+=========================================================*/
+
+@media(max-width:992px){
+
+header .container{
+
+grid-template-columns:1fr;
+
+height:auto;
+
+padding:20px 0;
+
+}
+
+nav{
+
+margin:20px 0;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.hero-left{
+
+text-align:center;
+
+margin:auto;
+
+}
+
+.hero-left h1{
+
+font-size:48px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.who-grid,
+
+.info-grid,
+
+.plans-grid,
+
+.info-three-grid,
+
+.contact-row,
+
+.footer-grid,
+
+.why-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.availability-card{
+
+position:relative;
+
+top:0;
+
+}
+
+.featured{
+
+transform:none;
+
+}
+
+.featured:hover{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+
+
+/*=========================================================
+MOBILE
+=========================================================*/
+
+/* --- DESKTOP FIX --- */
+/* Hide the mobile button on desktop by default */
+.hamburger-menu-btn, #mobile-menu-trigger, #hamburger {
+  display: none !important;
+}
+
+/* --- MOBILE FIX --- */
+@media (max-width: 768px) {
+  /* 1. Force the desktop links layout to vanish on mobile screen */
+  .navbar ul, .nav-links-container, .nav-links { 
+     /* Hides the links until the menu is active */
+  .navbar ul, .nav-links-container, .nav-links { 
+    display: none !important; 
+  }
+
+    top: 80px; 
+    left: 0;
+    width: 100%;
+    background-color: #0b1d33; /* Matches your dark blue banner */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  /* 2. Style vertical drop-down items */
+  .navbar ul li, .nav-links li {
+    margin: 15px 0 !important;
+    display: block !important;
+  }
+
+  /* 3. Reveal and correctly position the white hamburger button */
+  .hamburger-menu-btn, #mobile-menu-trigger, #hamburger {
+    display: block !important;
+    position: absolute !important;
+    right: 20px !important;
+    top: 25px !important;
+    font-size: 30px !important;
+    color: #ffffff !important;
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10000;
+  }
+
+  /* 4. This class will handle revealing the menu on click */
+  .navbar ul.show-menu, .nav-links.show-menu {
+    display: flex !important;
+  }
+}
+
+
+/*=========================================================
+SMALL MOBILE
+=========================================================*/
+
+@media(max-width:480px){
+
+.hero-left h1{
+
+font-size:30px;
+
+}
+
+.hero-left p{
+
+font-size:16px;
+
+}
+
+.btn-gold,
+
+.btn-outline{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.who-card,
+
+.info-card,
+
+.plan-card,
+
+.important-card{
+
+padding:25px;
+
+}
+
+.contact-box{
+
+padding:20px;
+
+}
+
+}
+
+/*=========================================================
+SCROLL ANIMATION
+=========================================================*/
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:all .8s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*=========================================================
+ACTIVE MENU
+=========================================================*/
+
+nav ul li a.active{
+
+color:#d4af37;
+
+}
+
+nav ul li a.active::after{
+
+width:100%;
+
+}
+
+/*=========================================================
+BACK TO TOP
+=========================================================*/
+
+#topButton{
+
+position:fixed;
+
+left:25px;
+
+bottom:25px;
+
+width:52px;
+
+height:52px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0b2d5c;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 12px 30px rgba(0,0,0,.2);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#topButton.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+#topButton:hover{
+
+background:#d4af37;
+
+color:#0b2d5c;
+
+transform:translateY(-5px);
+
+}
+
+/*=========================================================
+HERO SLIDER
+=========================================================*/
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero-slider{
+
+position:absolute;
+
+inset:0;
+
+z-index:0;
+
+}
+
+.slide{
+
+position:absolute;
+
+inset:0;
+
+background-size:cover;
+
+background-position:center;
+
+opacity:0;
+
+transition:opacity 1.5s ease;
+
+transform:scale(1);
+
+animation:kenburns 18s linear infinite;
+
+}
+
+.slide.active{
+
+opacity:1;
+
+}
+
+@keyframes kenburns{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+.overlay{
+
+position:relative;
+
+z-index:2;
+
+}
+
+/*=========================================================
+HERO IMAGE SLIDER
+=========================================================*/
+
+const slides = document.querySelectorAll(".slide");
+
+let currentSlide = 0;
+
+if(slides.length){
+
+    function showSlide(index){
+
+        slides.forEach(slide=>slide.classList.remove("active"));
+
+        slides[index].classList.add("active");
+
+    }
+
+    showSlide(0);
+
+    setInterval(()=>{
+
+        currentSlide++;
+
+        if(currentSlide>=slides.length){
+
+            currentSlide=0;
+
+        }
+
+        showSlide(currentSlide);
+
+    },5000);
+
+}
+
+/* Hide button on desktop views */
+.hamburger-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Mobile responsive breakdown */
+@media (max-width: 768px) {
+  .hamburger-menu-btn {
+    display: block; /* Show icon on mobile */
+  }
+
+  .nav-links-container {
+    display: none; /* Hide default horizontal links layout */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Use your website's theme color */
+  }
+
+  /* Reveals the dropdown menu layout when clicked */
+  .nav-links-container.show-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Hide the desktop links layout on small screens */
+  .navbar ul, .nav-links-container, .nav-links { 
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjusts position below your logo */
+    left: 0;
+    width: 100%;
+    background-color: #112233; /* Matches your dark blue background */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  /* 2. Style individual links inside the mobile dropdown */
+  .navbar ul li, .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* 3. Make your hidden hamburger icon visible and bright white */
+  .hamburger-menu-btn, #mobile-menu-trigger, #hamburger {
+    display: block !important;
+    position: absolute;
+    right: 20px; /* Moves it to the right side for easy thumb reaching */
+    top: 25px;
+    font-size: 28px;
+    color: #ffffff !important; /* Forces it to be white so it stands out */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* 4. Active state that JavaScript turns on when you tap the menu */
+  .navbar ul.show-menu, .nav-links.show-menu {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Force hides all lists, link containers, buttons, and phone numbers in the header */
+  header ul, 
+  nav ul, 
+  .navbar-nav, 
+  header .right-side, 
+  header a:not(.logo-link) { 
+    display: none !important; 
+  }
+
+  /* Keep ONLY the hamburger button visible */
+  .hamburger-menu-btn, 
+  #mobile-menu-trigger, 
+  #hamburger {
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* This rule forces the menu to appear vertically when the hamburger icon is tapped */
+  header ul.show-mobile-menu, 
+  nav ul.show-mobile-menu, 
+  .nav-links.show-mobile-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 70px; /* Positions dropdown directly below your header bar */
+    left: 0;
+    width: 100%;
+    background-color: #1e354f; /* Matches your header's dark blue tone */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 99999;
+  }
+
+  /* Ensures individual text links stack nicely inside the dropdown */
+  header ul.show-mobile-menu li, 
+  nav ul.show-mobile-menu li {
+    display: block !important;
+    margin: 15px 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Forces the dropdown container to show items vertically */
+  header ul.show-mobile-menu, nav ul.show-mobile-menu, .show-mobile-menu {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Forces individual text items to be visible, white, and centered */
+  header ul.show-mobile-menu li, nav ul.show-mobile-menu li {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 12px 0 !important;
+  }
+
+  /* Styles the text links so they stand out */
+  header ul.show-mobile-menu li a, nav ul.show-mobile-menu li a {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    display: block !important;
+  }
+}
+
+/* Target and hide the entire right-side container on desktop view */
+.header-right, 
+header .phone, 
+header .contact-btn {
+  display: none !important;
+}
+
+
