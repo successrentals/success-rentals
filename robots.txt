@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Point search engine crawlers to your sitemap file location
-Sitemap: https://successrentals.in
+Sitemap: https://successrentals.in/sitemap.xml
